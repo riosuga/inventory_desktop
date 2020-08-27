@@ -1,0 +1,83 @@
+<div class="container col-lg-12">
+  <div class="col-lg-12">
+    <h1>Data Referensi Supplier</h1>
+    <br />
+    <button class="btn btn-success" id ="buttonTambah" onclick = "add_data('m_supplier')"><i class="glyphicon glyphicon-plus"></i>Tambah Referensi Supplier</button>
+    <button class="btn btn-default" id ="buttonReload" onclick="loadMethod('m_supplier')"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
+    <br />
+    <br />
+  </div>
+  <div class="col-lg-12">
+    <table id="table" class="table table-striped table-bordered" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th>Nama Supplier</th>
+          <th>Alamat</th>
+          <th>Tanggal Perekaman</th>
+          <th>Tanggal Update</th>
+          <th style="width:125px;">Aksi</th>
+        </tr>
+      </thead>
+      <tbody id ="allData">
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Nama Supplier</th>
+          <th>Alamat</th>
+          <th>Tanggal Perekaman</th>
+          <th>Tanggal Update</th>
+          <th style="width:125px;">Aksi</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<div class="modal fade" id="modal_form" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Form Supplier</h3>
+            </div>
+            <div class="modal-body form">
+                <form action="#" id="form" class="form-horizontal">
+                    <input value= "m_supplier" id="nama_table" type="hidden">
+                    <input type="hidden" value="" name="id_supplier" id = "id_supplier"/> 
+                    <div class="form-body">
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Nama Supplier *)</label>
+                            <div class="col-md-9">
+                                <input name="nama_supplier" placeholder="Nama Supplier" class="form-control" type="text" id ="nama_supplier" required>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Alamat Supplier *)</label>
+                            <div class="col-md-9">
+                              <textarea name= "alamat_supplier" class="form-control" id ="alamat_supplier"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Contact Supplier *)</label>
+                            <div class="col-md-9">
+                                <input name="contact_supplier" placeholder="Contact Supplier" class="form-control" type="text" id ="contact_supplier" required>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-3">Email Supplier *)</label>
+                            <div class="col-md-9">
+                                <input name="email_supplier" placeholder="Email Supplier" class="form-control" type="email" id ="email_supplier" required>
+                                <span class="help-block"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btnSave" onclick="save('m_supplier')" class="btn btn-primary">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
